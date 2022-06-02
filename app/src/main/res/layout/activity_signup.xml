@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/avatar_imgView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="80dp"
+        android:contentDescription="@string/care"
+        android:src="@drawable/profile_picker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/sign_up_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="36dp"
+        android:drawableStart="@drawable/person_drawable_selector"
+        android:drawablePadding="10dp"
+        android:hint="@string/name"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColor="@color/pink_500"
+        android:theme="@style/Theme.SignInUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatar_imgView" />
+
+    <EditText
+        android:id="@+id/sign_up_address_tv"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="36dp"
+        android:drawableStart="@drawable/location_drawable_selector"
+        android:drawablePadding="10dp"
+        android:hint="@string/address"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textColor="@color/pink_500"
+        android:theme="@style/Theme.SignInUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_name_tv" />
+
+    <EditText
+        android:id="@+id/sign_up_phone_tv"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="36dp"
+        android:drawableStart="@drawable/phone_drawable_selector"
+        android:drawablePadding="10dp"
+        android:hint="@string/phone"
+        android:importantForAutofill="no"
+        android:inputType="phone"
+        android:textColor="@color/pink_500"
+        android:theme="@style/Theme.SignInUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_address_tv" />
+
+    <EditText
+        android:id="@+id/sign_up_password_tv"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="36dp"
+        android:drawableStart="@drawable/password_drawable_selector"
+        android:drawablePadding="10dp"
+        android:hint="@string/password"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        android:textColor="@color/pink_500"
+        android:theme="@style/Theme.SignInUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_phone_tv" />
+
+    <TextView
+        android:id="@+id/select_user_type_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="80dp"
+        android:text="@string/select_user_type"
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_password_tv"
+        app:layout_constraintHorizontal_bias="0.765"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_password_tv"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_password_tv" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/user_type_switch_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/select_user_type_tv"
+        app:layout_constraintStart_toStartOf="@+id/select_user_type_tv"
+        app:layout_constraintTop_toBottomOf="@+id/select_user_type_tv">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_user_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:padding="10dp"
+            android:textOff="@string/patient"
+            android:textOn="@string/nurse"
+            android:textSize="20sp"
+            android:thumb="@drawable/sw_thumb"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:showText="true"
+            app:switchTextAppearance="@style/Theme.SwitchBtn"
+            app:track="@drawable/sw_track" />
+
+        <TextView
+            android:id="@+id/switch_tip_nurse_tv"
+            style="@style/Theme.SwitchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nurse"
+            android:textColor="@color/pink_500"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/switch_user_type"
+            app:layout_constraintHorizontal_bias="0.808"
+            app:layout_constraintStart_toStartOf="@+id/switch_user_type"
+            app:layout_constraintTop_toTopOf="@+id/switch_user_type"
+            app:layout_constraintVertical_bias="0.448" />
+
+        <TextView
+            android:id="@+id/switch_tip_patient_tv"
+            style="@style/Theme.SwitchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/patient"
+            android:textColor="@color/pink_500"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/switch_user_type"
+            app:layout_constraintHorizontal_bias="0.19"
+            app:layout_constraintStart_toStartOf="@+id/switch_user_type"
+            app:layout_constraintTop_toTopOf="@+id/switch_user_type"
+            app:layout_constraintVertical_bias="0.448" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/sign_up_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="36dp"
+        android:text="@string/sign_up"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:theme="@style/Theme.SignInUp"
+        app:layout_constraintEnd_toEndOf="@+id/user_type_switch_layout"
+        app:layout_constraintStart_toStartOf="@+id/user_type_switch_layout"
+        app:layout_constraintTop_toBottomOf="@+id/user_type_switch_layout" />
+
+    <TextView
+        android:id="@+id/new_user_tv"
+        style="@style/Theme.SignInUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/already_sign_up"
+        app:layout_constraintBottom_toBottomOf="@+id/sign_in_tv"
+        app:layout_constraintEnd_toStartOf="@+id/sign_in_tv"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_btn"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_btn" />
+
+    <TextView
+        android:id="@+id/sign_in_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/sign_in"
+        android:textColor="@color/pink_500"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/new_user_tv"
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_btn"
+        app:layout_constraintStart_toEndOf="@+id/new_user_tv"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_btn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

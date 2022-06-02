@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="care">care</string>
+    <string name="welcome_back">Welcome Back,</string>
+    <string name="sign_in_to_continue">Sign in to continue</string>
+    <string name="phone">Phone</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="new_user">New User?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="select_user_type">Select user type *</string>
+    <string name="patient">Patient</string>
+    <string name="nurse">Nurse</string>
+
+    <string name="already_sign_up">Already sign up?</string>
+</resources>
